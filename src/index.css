@@ -1,5 +1,10 @@
+* {
+  margin: 0px;
+}
+
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -25,9 +30,27 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: space-around;
   padding: 1rem;
+  background-color: 	#E8C39E;
+  
+}
+
+span {
+	color: red;
+}
+
+nav div {
+	display: flex;
+	width: 20vw;
+	align-items: center;
+	justify-content: space-between;
+  padding-left: 35rem;
+}
+nav div i {
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 a{
@@ -40,16 +63,26 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
+a img{
+  width: 30px;
+}
+
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
   margin-top: 2rem;
+  background-color: #E8C39E;
+}
+
+footer div{
+  display: flex;
+  justify-content: space-around;
 }
 
 footer > img{
@@ -78,6 +111,10 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card img{
+  width: 200px;
 }
 
 .card:hover{
