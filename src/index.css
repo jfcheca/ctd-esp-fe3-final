@@ -1,16 +1,37 @@
 * {
   margin: 0px;
+
+}
+nav div button{
+  border-radius: 100px;
+  background-color: 181 178 178;
+  height: 30px;
+  width: 150px;
+  cursor: pointer;
+  
 }
 
+
 body {
-  margin: 0px;
-  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
 }
+
+main {
+  padding-bottom: 60px;
+  padding-top: 30px;
+  
+}
+
+main h1{
+ padding-bottom: 30px;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -76,11 +97,12 @@ footer {
   bottom: 0;
   width: 100%;
   height: 40px;
-  margin-top: 2rem;
   background-color: #E8C39E;
+  
 }
 
 footer div{
+  margin: 0px;
   display: flex;
   justify-content: space-around;
 }
@@ -108,9 +130,9 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 230px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border: 0.4px solid black;
 }
 
 .card img{
@@ -118,15 +140,15 @@ form{
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.4px solid red;
 }
 
 .card-grid{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
-  height: auto;
+  width: 100%;
+  height: 100%;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -156,4 +178,56 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+
+}
+
+.bodycontact{
+justify-content: space-around;
+display: flex;
+flex-direction: column;
+align-items: center;
+ height: 575px;
+
+}
+
+div form{
+  width: 300px;
+  height: 180px;
+}
+
+div form input{
+  height: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+
+.tamañocontacth2{
+  font-size: 50px;
+}
+
+.tamañocontactp{
+  font-size: 20px;
+}
+
+.cartafav{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cartafav h1{
+  padding-bottom: 50px;
+}
+
+.detail{
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.detail h1{
+  padding-bottom: 50px;
 }

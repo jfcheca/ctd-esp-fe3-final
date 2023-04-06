@@ -4,6 +4,8 @@ import { useState } from "react";
 
 const Form = () => {
 
+ const [mensaje, setMensaje] = useState('');
+
   const [Data, setData] = useState({
     "nombre":"",
     "email":""
@@ -19,17 +21,21 @@ const handleSubmit = e => {
   e.preventDefault()
   let validarNombre = /^.{5,}$/.test(Data.nombre)
   let validarMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(Data.email)
-  let Form = document.querySelector('form')
+
   if (validarNombre === false || validarMail === false) {
-      let error = document.createElement('p')
-      error.innerHTML = "Por favor verifique su información nuevamente."
-      Form.after(error)
-  } else {
-      let mensaje = document.createElement('p')
-      mensaje.innerHTML = `Bienvenido! ${Data.nombre}, checkea tu email para más información!`
-      Form.after(mensaje)
+    setMensaje("Por favor verifique su información nuevamente.")
+    
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
+  } 
+  else {
+    setMensaje(`Bienvenido! ${Data.nombre}, checkea tu email para más información!`)
+
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
   }
 }
+
 
 
   return (
@@ -37,8 +43,9 @@ const handleSubmit = e => {
       <form onSubmit={handleSubmit}>
       <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" onChange={handleChange} />
                 <input type="email" name="email" id="email" placeholder="Ingrese su email"  onChange={handleChange} />
-                <input type="submit" value="Enviar"/>
+                <input type="submit" value="Enviar" />
       </form>
+      {mensaje && <p>{mensaje}</p>}
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Home = () => {
       <div className='card-grid'>
         {state.element.map((info)=>{
 
-          return(<Card id={info.id} name={info.name} username={info.username} />)
+          return(<Card  key={info.id} id={info.id} name={info.name} username={info.username} />)
           
         })}
       </div>
