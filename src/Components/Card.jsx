@@ -40,7 +40,7 @@ const Card = ({ name, username, id }) => {
          <img src="/images/doctor.jpg" alt="Doctor" />
          <h2><Link to={`/${id}`} style={{color:state.theme.color}}> {name} </Link></h2>
          <h3 >{username}</h3>
-         <button onClick={addFav} className="favButton">Favorite</button>
+         <button onClick={addFav} className="favButton">	ADD ⭐</button>
     
     </div>
   );

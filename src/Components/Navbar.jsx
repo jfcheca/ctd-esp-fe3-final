@@ -18,7 +18,7 @@ const Navbar = () => {
        <Link to={'/'} style={{color:state.theme.color}}>Home</Link>
        <Link to={'/contact'}  style={{color:state.theme.color}}>Contact</Link>
        <Link to={'/favorites'}  style={{color:state.theme.color}}>Favorites</Link>
-       <button onClick={handleThemeChange}>Change theme</button>
+       <button onClick={handleThemeChange}>🌓</button>
        
        
        </div>
